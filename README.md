@@ -66,8 +66,41 @@ MODEL GRAPH:
 
 Program
 
+am = 5.7;
+
+fm = 413;
+
+ac = 11.4;
+
+fc = 4130;
+
+fs = 41300;
+
+beta = 4.4;
+
+t = 0:1/fs:3/fm;
+
+em = am*cos(2*3.14*fm*t);
+
+subplot(3,1,1);
+
+plot(t, em);
+
+ec = ac*cos(2*3.14*fc*t);
+
+subplot(3,1,2);
+
+plot(t, ec);
+
+efm = ac*cos(2*3.14*fc*t + beta*sin(2*3.14*fm*t));
+
+subplot(3,1,3);
+
+plot(t, efm);
 
 Output Waveform
+
+
 
 
 
@@ -75,9 +108,8 @@ Tabulation
 
 
 
+
 Calculation
-
-
 
 Frequency Deviation Practical = 
 
